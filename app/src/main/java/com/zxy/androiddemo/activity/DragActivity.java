@@ -78,25 +78,25 @@ public class DragActivity extends AppCompatActivity {
         @Override
         public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
 //            //滑动事件
-//            Collections.swap(mList, viewHolder.getAdapterPosition(), target.getAdapterPosition());
-//            mDragAdapter.notifyItemMoved(viewHolder.getAdapterPosition(), target.getAdapterPosition());
-//
-//            return false;
-            //得到当拖拽的viewHolder的Position
-            int fromPosition = viewHolder.getAdapterPosition();
-            //拿到当前拖拽到的item的viewHolder
-            int toPosition = target.getAdapterPosition();
-            if (fromPosition < toPosition) {
-                for (int i = fromPosition; i < toPosition; i++) {
-                    Collections.swap(mList, i, i + 1);
-                }
-            } else {
-                for (int i = fromPosition; i > toPosition; i--) {
-                    Collections.swap(mList, i, i - 1);
-                }
-            }
-            mDragAdapter.notifyItemMoved(fromPosition, toPosition);
+            Collections.swap(mList, viewHolder.getAdapterPosition(), target.getAdapterPosition());
+            mDragAdapter.notifyItemMoved(viewHolder.getAdapterPosition(), target.getAdapterPosition());
+
             return true;
+            //得到当拖拽的viewHolder的Position
+//            int fromPosition = viewHolder.getAdapterPosition();
+//            //拿到当前拖拽到的item的viewHolder
+//            int toPosition = target.getAdapterPosition();
+//            if (fromPosition < toPosition) {
+//                for (int i = fromPosition; i < toPosition; i++) {
+//                    Collections.swap(mList, i, i + 1);
+//                }
+//            } else {
+//                for (int i = fromPosition; i > toPosition; i--) {
+//                    Collections.swap(mList, i, i - 1);
+//                }
+//            }
+//            mDragAdapter.notifyItemMoved(fromPosition, toPosition);
+//            return true;
 
         }
 
