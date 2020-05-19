@@ -68,7 +68,8 @@ public class DragActivity extends AppCompatActivity {
             //首先回调的方法 返回int表示是否监听该方向
             //拖拽
             int dragFlags = ItemTouchHelper.UP | ItemTouchHelper.DOWN|ItemTouchHelper.LEFT|ItemTouchHelper.RIGHT;
-//            int dragFlags = ItemTouchHelper.UP | ItemTouchHelper.DOWN;          //LinearLayoutManager
+//            int dragFlags = ItemTouchHelper.UP | ItemTouchHelper.DOWN;  // LinearLayoutManager
+            //滑动
             int swipeFlags = 0;
 //            int swipeFlags = ItemTouchHelper.LEFT|ItemTouchHelper.RIGHT;//侧滑删除
             return makeMovementFlags(dragFlags, swipeFlags);
