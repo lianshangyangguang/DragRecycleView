@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/drag_layout"
+    android:background="@drawable/bg_drag_select"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/drag_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="A"
+        android:textColor="@drawable/bg_text_drag_select"
+        android:textSize="18dp" />
+
+    <ImageView
+        android:id="@+id/drag_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/icon_drag" />
+
+    <TextView
+        android:id="@+id/drag_item_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@+id/drag_img"
+        android:layout_toRightOf="@+id/drag_item_title"
+        android:textColor="@drawable/bg_text_drag_select"
+        android:text="A"
+        android:textSize="18dp" />
+
+</RelativeLayout>
